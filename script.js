@@ -1,60 +1,20 @@
-let input = document.getElementById('input_field')
-let todos = document.getElementById('allTodos')
+/**
+ * CREATE A TODO APP 
+ * 
+ * ==== DELIVERABLES ==== 
+ * 1. User should be able to input a todo item 
+ * 2. If item done should be able to click on it and strikethrough
+ * 3. User should be able to delete a task
+ * 4. User should be able to clear all tasks
+ * 
+ */
 
-let allTodos = []
+// your code should start here ======> 
 
-input.addEventListener('keydown', event => {
-  if (event.keyCode === 13) addTodo()
-})
+// create global variables and event listeners
 
-function deleteOne(id) {
-  allTodos.splice(id, 1)
-  displayAllItems()
-}
-
-function displayAllItems() {
-  todos.innerHTML = '' // clear DOM otherwise it will show duplicated array items in DOM
-
-  allTodos.forEach((item, index) => {
-    const newLi = document.createElement('div') // create a new div for each item in array
-
-    // add innerHTML to the new div created above
-    newLi.innerHTML = `<div class="todo_item"><h1 onclick="done(${index})"  style="text-decoration: ${
-      item.done ? 'line-through' : ''
-    }">${item.todo} </h1>
-    <button onclick="deleteOne(${index})">x</button>
-    </div>
-    `
-    return todos.appendChild(newLi)
-  })
-}
-
-function addTodo() {
-  // check if the input field is filled in
-  if (input.value !== '') {
-    // if filled in push brand new object into the array
-    allTodos.push({ todo: input.value, done: false, id: allTodos.length + 1 })
-    input.value = '' // reset the input value to empty
-
-    displayAllItems() // fire this function to display the items
-  } else {
-    alert('please type an item')
-  }
-}
-
-function done(id) {
-  // find the item that user clicked on
-  const itemFound = allTodos.find(x => x.id === id + 1)
-
-  // update the done attribute to true or false
-  itemFound.done = itemFound.done ? false : true
-
-  // find item in array, remove it and replace with new itemFound object
-  allTodos.splice(id, 1, itemFound)
-  displayAllItems()
-}
-
-function clearAll() {
-  allTodos = []
-  displayAllItems()
-}
+// create function to addOne item
+// create function to strikethru an item when done
+// create function to deleteOne item 
+// create function do displayAllItems
+// create function to clear all items
