@@ -1,5 +1,5 @@
 # TO DO app 
-![screenshot](/screenshot.png)
+![screenshot](https://github.com/coding-mentorship-program/javascript-todo-app/blob/main/screenshot.png?raw=true)
 
 ## Example of functionality: 
 1. User should be able to input a todo item 
