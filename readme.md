@@ -12,3 +12,7 @@
 2. When user clicks on a task - should find the item and update a property showing that is done
 3. When user clicks on an X it should find the item in the array and remove it from the array
 4. When user clicks on a clear all button it should clear all items from the array
+
+Live Site: 
+
+https://coding-mentorship-program.github.io/javascript-todo-app/
